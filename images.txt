@@ -5,8 +5,10 @@
 #支持指定架构
 # --platform=linux/arm64 xiaoyaliu/alist
 
-n8nio/n8n --platform=linux/amd64 linux/arm64
-python:3.9.23-bookworm --platform=linux/amd64
-python:3.12 --platform=linux/amd64 linux/arm64
-redis --platform=linux/amd64 linux/arm64
-mysql --platform=linux/amd64 linux/arm64
+--platform=linux/amd64 n8nio/n8n
+--platform=linux/amd64 n8nio/n8n:1.101.0
+
+--platform=linux/amd64 python:3.9.23-bookworm
+--platform=linux/amd64 python:3.12
+--platform=linux/amd64 redis
+--platform=linux/amd64 mysql
