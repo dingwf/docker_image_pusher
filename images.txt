@@ -8,3 +8,6 @@ xhofe/alist:latest
 n8nio/n8n
 docker.n8n.io/n8nio/n8n
 --platform=linux/amd64 linux/arm64
+
+python:3.9.23-bookworm
+--platform=linux/amd64
