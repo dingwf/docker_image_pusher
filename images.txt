@@ -12,9 +12,13 @@ n8nio/n8n:1.102.4
 python:3.12
 python:3.8.15
 python:3.8.15-slim
+python:3.8.15-bookworm
 python:3.8.15-slim-bullseye
+python:3.8.15-slim-bookworm
 python:3.12.8
 python:3.12.8-slim
+python:3.12.8-bookworm
 python:3.12.8-slim-bullseye
+python:3.12.8-slim-bookworm
 redis
 mysql:8.0.42
