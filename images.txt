@@ -15,9 +15,16 @@
 # python:3.8.15-slim-bullseye
 # python:3.12.8
 # python:3.12.8-slim
-python:3.12.8-bullseye
+# python:3.12.8-bullseye
 # python:3.12.8-bookworm
 # python:3.12.8-slim-bullseye
 # python:3.12.8-slim-bookworm
 # redis
 # mysql:8.0.42
+
+python:3.12.11
+python:3.12.11-slim
+python:3.12.11-bullseye
+python:3.12.11-bookworm
+python:3.12.11-slim-bullseye
+python:3.12.11-slim-bookworm
