@@ -40,9 +40,9 @@
 # node:20.15.1
 
 # metabase/metabase:v0.49.13
-# metabase/metabase:v0.55.9.3
+metabase/metabase:v0.55.9.3
 
 # rabbitmq:3.11.13-management
 
-mysql:8.0.30
+# mysql:8.0.30
 # mysql:8.0.42
