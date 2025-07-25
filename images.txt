@@ -22,9 +22,14 @@
 # redis
 # mysql:8.0.42
 
-python:3.12.11
-python:3.12.11-slim
-python:3.12.11-bullseye
-python:3.12.11-bookworm
-python:3.12.11-slim-bullseye
-python:3.12.11-slim-bookworm
+# python:3.12.11
+# python:3.12.11-slim
+# python:3.12.11-bullseye
+# python:3.12.11-bookworm
+# python:3.12.11-slim-bullseye
+# python:3.12.11-slim-bookworm
+
+# glitchtip使用
+glitchtip/glitchtip:5.0.9
+redis:7-alpine
+postgres:16-alpine
