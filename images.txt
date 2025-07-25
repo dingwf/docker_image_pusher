@@ -30,6 +30,9 @@
 # python:3.12.11-slim-bookworm
 
 # glitchtip使用
-glitchtip/glitchtip:v5.0.9
-redis:7-alpine
-postgres:16-alpine
+# glitchtip/glitchtip:v5.0.9
+# redis:7-alpine
+# postgres:16-alpine
+
+node:14.21.3
+nginx:latest
