@@ -35,8 +35,10 @@
 # postgres:16-alpine
 
 # nginx:latest
-node:14.21.3
-node:16.20.2
-node:18.20.2
-node:20.15.1
+# node:14.21.3
+# node:16.20.2
+# node:18.20.2
+# node:20.15.1
 
+metabase/metabase:v0.49.13
+metabase/metabase:v0.55.9.3
