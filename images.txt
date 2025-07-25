@@ -20,7 +20,6 @@
 # python:3.12.8-slim-bullseye
 # python:3.12.8-slim-bookworm
 # redis
-# mysql:8.0.42
 
 # python:3.12.11
 # python:3.12.11-slim
@@ -43,4 +42,7 @@
 # metabase/metabase:v0.49.13
 # metabase/metabase:v0.55.9.3
 
-rabbitmq:3.11.13-management
+# rabbitmq:3.11.13-management
+
+mysql:8.0.30
+# mysql:8.0.42
