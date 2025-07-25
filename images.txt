@@ -34,5 +34,9 @@
 # redis:7-alpine
 # postgres:16-alpine
 
+# nginx:latest
 node:14.21.3
-nginx:latest
+node:16.20.2
+node:18.20.2
+node:20.15.1
+
