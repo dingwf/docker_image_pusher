@@ -33,6 +33,7 @@ n8nio/n8n:1.106.1
 # glitchtip/glitchtip:v5.0.9
 # redis:7-alpine
 # postgres:16-alpine
+glitchtip/glitchtip:v5.1.0
 
 # nginx:latest
 # node:12.22.12
