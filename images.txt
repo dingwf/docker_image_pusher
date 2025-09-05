@@ -34,7 +34,7 @@
 # redis:7-alpine
 # postgres:16-alpine
 # glitchtip/glitchtip:v5.1.0
-glitchtip/glitchtip:v5.1.1
+# glitchtip/glitchtip:v5.1.1
 
 # nginx:latest
 # node:12.22.12
@@ -50,3 +50,8 @@ glitchtip/glitchtip:v5.1.1
 
 # mysql:8.0.30
 # mysql:8.0.42
+
+########## sentry
+getsentry/sentry:25.8.0
+
+
