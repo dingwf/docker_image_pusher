@@ -52,6 +52,7 @@
 # mysql:8.0.42
 
 ########## sentry
-getsentry/sentry:25.8.0
+getsentry/sentry:nightly
+getsentry/sentry:nightly-alpine
 
 
