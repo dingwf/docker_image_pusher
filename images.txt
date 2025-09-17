@@ -35,8 +35,8 @@
 # postgres:16-alpine
 # glitchtip/glitchtip:v5.1.0
 # glitchtip/glitchtip:v5.1.1
-glitchtip/glitchtip:v5.0.8
-glitchtip/glitchtip:v4.2.10
+# glitchtip/glitchtip:v5.0.8
+# glitchtip/glitchtip:v4.2.10
 
 
 # nginx:latest
@@ -54,5 +54,11 @@ glitchtip/glitchtip:v4.2.10
 # mysql:8.0.30
 # mysql:8.0.42
 
+#### ragflow
+elasticsearch:8.11.3
+nfiniflow/infinity:v0.6.0-dev5
+mysql:8.0.39
+quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
+valkey/valkey:8
 
 
