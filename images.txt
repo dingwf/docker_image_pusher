@@ -56,7 +56,7 @@
 
 #### ragflow
 elasticsearch:8.11.3
-nfiniflow/infinity:v0.6.0-dev5
+# nfiniflow/infinity:v0.6.0-dev5
 mysql:8.0.39
 quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
 valkey/valkey:8
