@@ -9,6 +9,7 @@
 # n8nio/n8n:1.101.0
 # n8nio/n8n:1.102.4
 # n8nio/n8n:1.106.1
+n8nio/n8n:1.115.2
 
 # python:3.12
 # python:3.8.15
@@ -55,10 +56,10 @@
 # mysql:8.0.42
 
 #### ragflow
-elasticsearch:8.11.3
+# elasticsearch:8.11.3
 # nfiniflow/infinity:v0.6.0-dev5
-mysql:8.0.39
-quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
-valkey/valkey:8
+# mysql:8.0.39
+# quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
+# valkey/valkey:8
 
 
