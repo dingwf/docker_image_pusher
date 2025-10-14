@@ -63,6 +63,7 @@
 # valkey/valkey:8
 
 # label-studio
+postgres:16-alpine
 heartexlabs/label-studio:latest
 
 
