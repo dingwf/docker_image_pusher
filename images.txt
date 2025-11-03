@@ -62,9 +62,10 @@ n8nio/n8n:1.115.3
 # mysql:8.0.39
 # quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
 # valkey/valkey:8
+infiniflow/ragflow:v0.21.1
 
 # label-studio
-postgres:16-alpine
-heartexlabs/label-studio:latest
+# postgres:16-alpine
+# heartexlabs/label-studio:latest
 
 
