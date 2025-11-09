@@ -69,13 +69,13 @@ n8nio/n8n:1.115.3
 # heartexlabs/label-studio:latest
 
 ##### sentry
-# ghcr.io/getsentry/sentry:24.6.1
-# ghcr.io/getsentry/snuba:24.6.1
-getsentry/relay:24.7.1
-getsentry/symbolicator:24.7.1
-# docker.io/confluentinc/cp-kafka:7.5.1
-# docker.io/confluentinc/cp-zookeeper:7.5.1
-# docker.io/library/redis:7.2
-# docker.io/library/postgres:15
-# docker.io/clickhouse/clickhouse-server:24.4
+# getsentry/sentry:24.7.1
+# getsentry/snuba:24.7.1
+# getsentry/relay:24.7.1
+# getsentry/symbolicator:24.7.1
+confluentinc/cp-kafka:7.5.1
+cp-zookeeper:7.5.1
+redis:7.2
+postgres:15
+clickhouse-server:24.4
 
