@@ -10,7 +10,7 @@
 # n8nio/n8n:1.102.4
 # n8nio/n8n:1.106.1
 # n8nio/n8n:1.115.2
-n8nio/n8n:1.115.3
+# n8nio/n8n:1.115.3
 
 # python:3.12
 # python:3.8.15
