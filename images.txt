@@ -71,8 +71,8 @@ n8nio/n8n:1.115.3
 ##### sentry
 # ghcr.io/getsentry/sentry:24.6.1
 # ghcr.io/getsentry/snuba:24.6.1
-ghcr.io/getsentry/relay:24.7.1
-ghcr.io/getsentry/symbolicator:24.7.1
+getsentry/relay:24.7.1
+getsentry/symbolicator:24.7.1
 # docker.io/confluentinc/cp-kafka:7.5.1
 # docker.io/confluentinc/cp-zookeeper:7.5.1
 # docker.io/library/redis:7.2
