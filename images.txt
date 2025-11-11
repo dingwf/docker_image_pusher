@@ -89,6 +89,6 @@ nginx:1.29.1-alpine
 postgres:14.19-bookworm
 redis:6.2.20-alpine
 registry.gitlab.com/egos-tech/smtp
-sentry-cleanup-self-hosted-local
+# sentry-cleanup-self-hosted-local
 # vroom-cleanup-self-hosted-local
 # clickhouse-self-hosted-local
