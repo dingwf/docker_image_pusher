@@ -75,7 +75,10 @@
 # getsentry/symbolicator:24.7.1
 # confluentinc/cp-kafka:7.5.1
 # confluentinc/cp-zookeeper:7.5.1
-redis:7.2
-postgres:15
+# redis:7.2
+# postgres:15
 # clickhouse/clickhouse-server:24.4
+
+
+chrislusf/seaweedfs:3.96_large_disk
 
