@@ -11,6 +11,7 @@
 # n8nio/n8n:1.106.1
 # n8nio/n8n:1.115.2
 # n8nio/n8n:1.115.3
+n8nio/n8n:1.123.4
 
 # python:3.12
 # python:3.8.15
@@ -83,12 +84,12 @@
 # chrislusf/seaweedfs:3.96_large_disk
 # confluentinc/cp-kafka:7.6.6
 
-edoburu/pgbouncer:v1.24.1-p1
-memcached:1.6.26-alpine
-nginx:1.29.1-alpine
-postgres:14.19-bookworm
-redis:6.2.20-alpine
-registry.gitlab.com/egos-tech/smtp
+# edoburu/pgbouncer:v1.24.1-p1
+# memcached:1.6.26-alpine
+# nginx:1.29.1-alpine
+# postgres:14.19-bookworm
+# redis:6.2.20-alpine
+# registry.gitlab.com/egos-tech/smtp
 # sentry-cleanup-self-hosted-local
 # vroom-cleanup-self-hosted-local
 # clickhouse-self-hosted-local
