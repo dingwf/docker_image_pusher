@@ -5,7 +5,8 @@
 # 支持指定架构
 # --platform=linux/arm64 xiaoyaliu/alist
 
-wordpress:6.9.0-php8.5-fpm
+# wordpress:6.9.0-php8.5-fpm
+wordpress:php8.5-apache
 
 # n8nio/n8n
 # n8nio/n8n:1.101.0
