@@ -6,7 +6,7 @@
 # --platform=linux/arm64 xiaoyaliu/alist
 
 # wordpress:6.9.0-php8.5-fpm
-wordpress:php8.5-apache
+# wordpress:php8.5-apache
 
 # n8nio/n8n
 # n8nio/n8n:1.101.0
@@ -54,6 +54,7 @@ wordpress:php8.5-apache
 
 # metabase/metabase:v0.49.13
 # metabase/metabase:v0.55.9.3
+metabase/metabase:v0.57.7.4
 
 # rabbitmq:3.11.13-management
 
