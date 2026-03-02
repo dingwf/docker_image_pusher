@@ -35,6 +35,9 @@
 # python:3.12.11-slim-bullseye
 # python:3.12.11-slim-bookworm
 
+python:3.13.12
+python:3.13.12-slim
+
 # glitchtip使用
 # glitchtip/glitchtip:v5.0.9
 # redis:7-alpine
@@ -54,7 +57,7 @@
 
 # metabase/metabase:v0.49.13
 # metabase/metabase:v0.55.9.3
-metabase/metabase:v0.57.7.4
+# metabase/metabase:v0.57.7.4
 
 # rabbitmq:3.11.13-management
 
