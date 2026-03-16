@@ -70,7 +70,7 @@
 # mysql:8.0.39
 # quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
 # valkey/valkey:8
-infiniflow/ragflow:v0.22.1
+# infiniflow/ragflow:v0.22.1
 
 # label-studio
 # postgres:16-alpine
@@ -100,3 +100,5 @@ infiniflow/ragflow:v0.22.1
 # sentry-cleanup-self-hosted-local
 # vroom-cleanup-self-hosted-local
 # clickhouse-self-hosted-local
+
+ubuntu:22.04
