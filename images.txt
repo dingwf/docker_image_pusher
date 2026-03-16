@@ -35,8 +35,8 @@
 # python:3.12.11-slim-bullseye
 # python:3.12.11-slim-bookworm
 
-python:3.13.12
-python:3.13.12-slim
+# python:3.13.12
+# python:3.13.12-slim
 
 # glitchtip使用
 # glitchtip/glitchtip:v5.0.9
@@ -70,7 +70,7 @@ python:3.13.12-slim
 # mysql:8.0.39
 # quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
 # valkey/valkey:8
-# infiniflow/ragflow:v0.21.1
+infiniflow/ragflow:v0.22.1
 
 # label-studio
 # postgres:16-alpine
