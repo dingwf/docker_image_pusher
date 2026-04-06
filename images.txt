@@ -34,6 +34,8 @@
 # python:3.12.11-bookworm
 # python:3.12.11-slim-bullseye
 # python:3.12.11-slim-bookworm
+python:3.12.12-bookworm
+python:3.12.12-slim-bookworm
 
 # python:3.13.12
 # python:3.13.12-slim
@@ -101,4 +103,4 @@
 # vroom-cleanup-self-hosted-local
 # clickhouse-self-hosted-local
 
-ubuntu:22.04
+# ubuntu:22.04
