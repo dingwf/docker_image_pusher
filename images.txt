@@ -15,6 +15,7 @@
 # n8nio/n8n:1.115.2
 # n8nio/n8n:1.115.3
 # n8nio/n8n:1.123.4
+n8nio/n8n:2.15.1
 
 # python:3.12
 # python:3.8.15
@@ -34,8 +35,8 @@
 # python:3.12.11-bookworm
 # python:3.12.11-slim-bullseye
 # python:3.12.11-slim-bookworm
-python:3.12.12-bookworm
-python:3.12.12-slim-bookworm
+# python:3.12.12-bookworm
+# python:3.12.12-slim-bookworm
 
 # python:3.13.12
 # python:3.13.12-slim
