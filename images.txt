@@ -104,4 +104,22 @@ n8nio/n8n:2.15.1
 # vroom-cleanup-self-hosted-local
 # clickhouse-self-hosted-local
 
+##### sentry 25.10.0
+ghcr.io/getsentry/sentry:25.10.0
+ghcr.io/getsentry/snuba:25.10.0
+ghcr.io/getsentry/relay:25.10.0
+ghcr.io/getsentry/symbolicator:25.10.0
+ghcr.io/getsentry/taskbroker:25.10.0
+ghcr.io/getsentry/vroom:25.10.0
+ghcr.io/getsentry/uptime-checker:25.10.0
+postgres:14.19-bookworm
+redis:6.2.20-alpine
+confluentinc/cp-kafka:7.6.6
+altinity/clickhouse-server:25.3.6.10034.altinitystable
+edoburu/pgbouncer:v1.24.1-p1
+nginx:1.29.1-alpine
+memcached:1.6.26-alpine
+chrislusf/seaweedfs:3.96_large_disk
+registry.gitlab.com/egos-tech/smtp
+
 # ubuntu:22.04
