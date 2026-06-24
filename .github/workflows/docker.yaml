@@ -55,9 +55,41 @@ jobs:
     - name: Docker Setup Buildx
       uses: docker/setup-buildx-action@v3
 
+    - name: Install skopeo
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y skopeo
+
     - name: Build and push image Aliyun
       run: |
-        docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
+        set -euo pipefail
+        printf '%s' "$ALIYUN_REGISTRY_PASSWORD" | \
+          docker login --username "$ALIYUN_REGISTRY_USER" --password-stdin "$ALIYUN_REGISTRY"
+
+        # The image may appear before or after the optional platform argument:
+        #   nginx:1.27
+        #   --platform=linux/arm64 nginx:1.27
+        #   nginx:1.27 --platform linux/arm64
+        parse_image_line() {
+          image=""
+          platform=""
+          local next_is_platform=false
+          local token
+          for token in $1; do
+            if [[ "$next_is_platform" == true ]]; then
+              platform="$token"
+              next_is_platform=false
+            elif [[ "$token" == --platform=* ]]; then
+              platform="${token#--platform=}"
+            elif [[ "$token" == "--platform" ]]; then
+              next_is_platform=true
+            else
+              image="$token"
+            fi
+          done
+          [[ -n "$image" ]]
+        }
+
         # 数据预处理,判断镜像是否重名
         declare -A duplicate_images
         declare -A temp_map
@@ -68,8 +100,8 @@ jobs:
                 continue
             fi
             
+            parse_image_line "$line"
             # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
-            image=$(echo "$line" | awk '{print $NF}')
             # 将@sha256:等字符删除
             image="${image%%@*}"
             echo "image $image"
@@ -86,7 +118,7 @@ jobs:
             echo "image_name: $image_name"
             
             # 如果镜像存在于数组中，则添加temp_map
-            if [[ -n "${temp_map[$image_name]}" ]]; then
+            if [[ -n "${temp_map[$image_name]:-}" ]]; then
                  # 如果temp_map已经存在镜像名，判断是不是同一命名空间
                  if [[ "${temp_map[$image_name]}" != $name_space  ]]; then
                     echo "duplicate image name: $image_name"
@@ -106,10 +138,10 @@ jobs:
                 continue
             fi
         
-            echo "docker pull $line"
-            docker pull $line
-            platform=$(echo "$line" | awk -F'--platform[ =]' '{if (NF>1) print $2}' | awk '{print $1}')
-            echo "platform is $platform"
+            parse_image_line "$line"
+            source_image="$image"
+            echo "source image: $source_image"
+            echo "requested platform: ${platform:-all platforms}"
             # 如果存在架构信息 将架构信息拼到镜像名称前面
             if [ -z "$platform" ]; then
                 platform_prefix=""
@@ -117,9 +149,6 @@ jobs:
                 platform_prefix="${platform//\//_}_"
             fi
             echo "platform_prefix is $platform_prefix"
-            # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
-            image=$(echo "$line" | awk '{print $NF}')
-
             # 获取 镜像名:版本号  例如nginx:1.25.3
             image_name_tag=$(echo "$image" | awk -F'/' '{print $NF}')
             # 获取命名空间 例如kasmweb  这里有种特殊情况 docker.io/nginx，把docker.io当成命名空间，也OK
@@ -139,19 +168,26 @@ jobs:
             # 将@sha256:等字符删除
             image_name_tag="${image_name_tag%%@*}"
             new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$image_name_tag"
-            echo "docker tag $image $new_image"
-            docker tag $image $new_image
-            echo "docker push $new_image"
-            docker push $new_image
-            echo "开始清理磁盘空间"
-            echo "=============================================================================="
-            df -hT
-            echo "=============================================================================="
-            docker rmi $image
-            docker rmi $new_image
-            echo "磁盘空间清理完毕"
-            echo "=============================================================================="
-            df -hT
-            echo "=============================================================================="     
+            # Without --platform, --all preserves the source OCI/Docker
+            # manifest list and every referenced architecture image. One
+            # destination tag can then serve both amd64 and arm64.
+            if [[ -z "$platform" ]]; then
+              echo "copying all source platforms to $new_image"
+              skopeo copy --all --retry-times 3 \
+                "docker://$source_image" "docker://$new_image"
+            else
+              IFS=/ read -r platform_os platform_arch platform_variant <<< "$platform"
+              if [[ -z "$platform_os" || -z "$platform_arch" ]]; then
+                echo "Invalid platform '$platform'; expected os/arch or os/arch/variant" >&2
+                exit 1
+              fi
+              echo "copying $platform to $new_image"
+              skopeo_args=(--retry-times 3 --override-os "$platform_os" --override-arch "$platform_arch")
+              if [[ -n "${platform_variant:-}" ]]; then
+                skopeo_args+=(--override-variant "$platform_variant")
+              fi
+              skopeo copy "${skopeo_args[@]}" \
+                "docker://$source_image" "docker://$new_image"
+            fi
             
         done < images.txt

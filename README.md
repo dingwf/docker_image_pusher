@@ -41,7 +41,8 @@ ALIYUN_NAME_SPACE,ALIYUN_REGISTRY_USER，ALIYUN_REGISTRY_PASSWORD，ALIYUN_REGIS
 ### 添加镜像
 打开images.txt文件，添加你想要的镜像 
 可以加tag，也可以不用(默认latest)<br>
-可添加 --platform=xxxxx 的参数指定镜像架构<br>
+默认会完整复制上游镜像的 manifest list 和所有可用架构（例如 `linux/amd64`、`linux/arm64`），推送后仍是同一个镜像名和 tag。Docker/Kubernetes 会根据节点架构自动拉取正确变体。<br>
+可添加 `--platform=xxxxx` 只同步一个架构；此时为避免覆盖多架构 tag，目标镜像名称会带架构前缀。<br>
 可使用 k8s.gcr.io/kube-state-metrics/kube-state-metrics 格式指定私库<br>
 可使用 #开头作为注释<br>
 ![](doc/images.png)
@@ -60,8 +61,25 @@ shrimp-images 即 ALIYUN_NAME_SPACE(阿里云命名空间)<br>
 alpine 即 阿里云中显示的镜像名<br>
 
 ### 多架构
-需要在images.txt中用 --platform=xxxxx手动指定镜像架构
-指定后的架构会以前缀的形式放在镜像名字前面
+不添加 `--platform` 时，Action 使用 `skopeo copy --all` 同步上游全部架构；这是推荐方式：
+
+```
+python:3.12.12-slim-bookworm
+```
+
+如果上游同时发布 amd64 与 arm64，阿里云中的同名 tag 也会同时包含两者。验证：
+
+```bash
+docker buildx imagetools inspect registry.cn-hangzhou.aliyuncs.com/<命名空间>/python:3.12.12-slim-bookworm
+```
+
+只有需要固定单架构时才写 `--platform`，例如：
+
+```
+--platform=linux/arm64 python:3.12.12-slim-bookworm
+```
+
+指定后的架构会以前缀的形式放在镜像名字前面；上游本身仅发布单架构时，也只能同步到该架构。
 ![](doc/多架构.png)
 
 ### 镜像重名
