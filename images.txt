@@ -42,8 +42,10 @@
 # python:3.13.12
 # python:3.13.12-slim
 
-uv:python3.12-bookworm
-uv:python3.12-bookworm-slim
+# Astral uv is published on GHCR, not Docker Hub.  Keep the full source
+# registry name so the workflow can copy its amd64 and arm64 manifests.
+ghcr.io/astral-sh/uv:python3.12-bookworm
+ghcr.io/astral-sh/uv:python3.12-bookworm-slim
 
 # glitchtip使用
 # glitchtip/glitchtip:v5.0.9
