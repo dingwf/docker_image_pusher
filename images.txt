@@ -44,8 +44,8 @@
 
 # Astral uv is published on GHCR, not Docker Hub.  Keep the full source
 # registry name so the workflow can copy its amd64 and arm64 manifests.
-ghcr.io/astral-sh/uv:python3.12-bookworm
-ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+# ghcr.io/astral-sh/uv:python3.12-bookworm
+# ghcr.io/astral-sh/uv:python3.12-bookworm-slim
 
 # glitchtip使用
 # glitchtip/glitchtip:v5.0.9
@@ -68,6 +68,7 @@ ghcr.io/astral-sh/uv:python3.12-bookworm-slim
 # metabase/metabase:v0.49.13
 # metabase/metabase:v0.55.9.3
 # metabase/metabase:v0.57.7.4
+metabase/metabase:v0.63.1
 
 # rabbitmq:3.11.13-management
 
