@@ -68,7 +68,7 @@
 # metabase/metabase:v0.49.13
 # metabase/metabase:v0.55.9.3
 # metabase/metabase:v0.57.7.4
-metabase/metabase:v0.63.1
+# metabase/metabase:v0.63.1
 
 # rabbitmq:3.11.13-management
 
@@ -105,6 +105,8 @@ metabase/metabase:v0.63.1
 # edoburu/pgbouncer:v1.24.1-p1
 # memcached:1.6.26-alpine
 # nginx:1.29.1-alpine
+nginx:1.30.4-alpine3.24
+
 # postgres:14.19-bookworm
 # redis:6.2.20-alpine
 # registry.gitlab.com/egos-tech/smtp
