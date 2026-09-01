@@ -83,6 +83,9 @@
 # valkey/valkey:8
 # infiniflow/ragflow:v0.22.1
 
+elasticsearch:8.19.20
+redis:8.2.9-alpine
+
 # label-studio
 # postgres:16-alpine
 # heartexlabs/label-studio:latest
@@ -105,7 +108,7 @@
 # edoburu/pgbouncer:v1.24.1-p1
 # memcached:1.6.26-alpine
 # nginx:1.29.1-alpine
-nginx:1.30.4-alpine3.24
+# nginx:1.30.4-alpine3.24
 
 # postgres:14.19-bookworm
 # redis:6.2.20-alpine
