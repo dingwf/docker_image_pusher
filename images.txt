@@ -138,4 +138,4 @@
 # ubuntu:22.04
 
 # 网络工具：wget，curl等
-wbitt/network-mu
+wbitt/network-multitool
