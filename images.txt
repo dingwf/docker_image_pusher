@@ -83,8 +83,8 @@
 # valkey/valkey:8
 # infiniflow/ragflow:v0.22.1
 
-elasticsearch:8.19.20
-redis:8.2.9-alpine
+# elasticsearch:8.19.20
+# redis:8.2.9-alpine
 
 # label-studio
 # postgres:16-alpine
@@ -136,3 +136,6 @@ redis:8.2.9-alpine
 # registry.gitlab.com/egos-tech/smtp
 
 # ubuntu:22.04
+
+# 网络工具：wget，curl等
+wbitt/network-mu
