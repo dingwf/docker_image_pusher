@@ -138,4 +138,13 @@
 # ubuntu:22.04
 
 # 网络工具：wget，curl等
-wbitt/network-multitool
+# wbitt/network-multitool
+
+
+# prometheus
+prom/prometheus:v3.14.0
+prom/alertmanager:v0.27.0
+grafana/grafana:11.1.0
+quay.io/martinhelmich/prometheus-nginxlog-exporter:v1.11.0
+
+
