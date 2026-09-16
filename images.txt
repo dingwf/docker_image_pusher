@@ -142,9 +142,9 @@
 
 
 # prometheus
-prom/prometheus:v3.14.0
-prom/alertmanager:v0.27.0
-grafana/grafana:11.1.0
+prom/prometheus:v3.13.3
+prom/alertmanager:v0.34.0
+grafana/grafana:13.2.2
 quay.io/martinhelmich/prometheus-nginxlog-exporter:v1.11.0
 
 
