@@ -114,7 +114,7 @@
 # memcached:1.6.26-alpine
 # nginx:1.29.1-alpine
 # nginx:1.30.4-alpine3.24
-nginx:1.30.6-alpine
+# nginx:1.30.6-alpine
 
 # postgres:14.19-bookworm
 # redis:6.2.20-alpine
@@ -153,5 +153,8 @@ nginx:1.30.6-alpine
 # grafana/grafana:13.2.2
 # quay.io/martinhelmich/prometheus-nginxlog-exporter:v1.11.0
 # timberio/vector:0.58.0-alpine
+
+alpine:3.24
+
 
 
