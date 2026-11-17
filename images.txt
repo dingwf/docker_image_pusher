@@ -61,6 +61,8 @@
 # glitchtip/glitchtip:v5.0.8
 # glitchtip/glitchtip:v4.2.10
 
+postgres:17.12-trixie
+postgres:18.7-trixie
 
 # nginx:latest
 # node:12.22.12
@@ -154,7 +156,7 @@
 # quay.io/martinhelmich/prometheus-nginxlog-exporter:v1.11.0
 # timberio/vector:0.58.0-alpine
 
-alpine:3.24
+# alpine:3.24
 
 
 
